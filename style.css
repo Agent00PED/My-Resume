@@ -1,0 +1,206 @@
+/* ==========================================================================
+   1. RESET & BASE STYLES (ธีมสีน้ำเงิน-ดำ Cyberpunk แบบคลีนๆ)
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #050b14; /* พื้นหลังจอนอกสีดำเข้ม */
+    color: #c9d1d9;            /* ตัวหนังสือสีเทาอ่อนเพื่อให้อ่านง่าย */
+    font-family: 'Share Tech Mono', monospace;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    justify-content: center;   /* จัดหน้ากระดาษ A4 ให้อยู่กึ่งกลางหน้าจอ Desktop */
+}
+
+/* หัวข้อหลักเรืองแสงสีฟ้า Cyan */
+h1, h2, h3, h4 {
+    color: #00e6e6;
+    text-shadow: 0 0 5px rgba(0, 230, 230, 0.4);
+    margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   2. LAYOUT: STRUCTURE DECORATION (หน้ากระดาษจำลอง A4)
+   ========================================================================== */
+.resume-a4 {
+    background-color: #0a111c; /* สีกระดาษด้านในโทนน้ำเงินดำเข้ม */
+    width: 100%;
+    max-width: 800px;          /* ควบคุมความกว้างมาตรฐานสัดส่วนแผ่น A4 */
+    border: 1px solid #1a2a40;
+    box-shadow: 0 0 15px rgba(0, 230, 230, 0.1);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+/* ==========================================================================
+   3. SECTION CONTENT DESIGN (Header, About, Grid-3-Cols, Footer)
+   ========================================================================== */
+
+/* --- Header Section --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1a2a40;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+header .subtitle {
+    color: #8b949e;
+    font-size: 1.1rem;
+}
+
+header nav a {
+    color: #c9d1d9;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.1rem;
+}
+
+header nav a:hover {
+    color: #00e6e6;
+}
+
+/* --- About Section (จัดเลย์เอาต์ด้วย Flexbox) --- */
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 2px solid #00e6e6;
+    object-fit: cover;         /* ล็อคสัดส่วนรูปถ่ายไม่ให้บิดเบี้ยว */
+}
+
+.about-text {
+    flex: 1;
+}
+
+/* --- Background Section (แบ่ง 3 คอลัมน์ด้วย CSS Grid) --- */
+.grid-3-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* แบ่งเป็น 3 คอลัมน์ขนาดเท่ากัน */
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.cyber-box {
+    background-color: #0d1522;
+    padding: 20px;
+    border: 1px solid #1a2a40;
+    border-radius: 4px;
+}
+
+.cyber-box h3 {
+    font-size: 1.1rem;
+    border-bottom: 1px dashed #1a2a40;
+    padding-bottom: 5px;
+    margin-top: 15px;
+}
+
+.cyber-box h3:first-child {
+    margin-top: 0;
+}
+
+.cyber-box ul {
+    padding-left: 15px;
+}
+
+.cyber-box li {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.edu-text {
+    font-size: 0.85rem;
+}
+
+/* --- รายละเอียดภายในส่วนโปรเจกต์ (คอลัมน์ที่ 3) --- */
+.project-item {
+    margin-bottom: 15px;
+}
+
+.project-item h4 {
+    font-size: 0.95rem;
+    color: #fff;
+    text-shadow: none;
+    margin-bottom: 2px;
+}
+
+.project-org {
+    font-size: 0.8rem;
+    color: #8b949e;
+    margin-bottom: 5px;
+}
+
+.project-desc {
+    font-size: 0.85rem;
+    color: #c9d1d9;
+}
+
+/* --- Footer Section --- */
+footer {
+    text-align: center;
+    border-top: 1px solid #1a2a40;
+    padding-top: 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .social-links a {
+    color: #00e6e6;
+    text-decoration: none;
+}
+
+footer .end-file {
+    font-size: 0.8rem;
+    color: #484f58;
+    margin-top: 15px;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (CROSS-DEVICE LAYOUT SHIFTING)
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .resume-a4 {
+        border-radius: 0;
+        border: none;
+        padding: 20px;
+    }
+
+    header {
+        flex-direction: column; /* เปลี่ยนเมนูบาร์เป็นแนวตั้งบนมือถือ */
+        text-align: center;
+        gap: 15px;
+    }
+
+    header nav a {
+        margin: 0 10px;
+    }
+
+    .about-flex {
+        flex-direction: column; /* สลับรูปโปรไฟล์มาอยู่บนข้อความ */
+        text-align: center;
+    }
+
+    .grid-3-cols {
+        grid-template-columns: 1fr; /* ยุบจาก 3 คอลัมน์เหลือ 1 คอลัมน์เดี่ยวแนวตั้ง */
+    }
+}
