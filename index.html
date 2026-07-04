@@ -4,100 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - WONGSATHON</title>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="resume-a4">
+    <div class="resume-container">
         
         <header>
-            <div class="header-title">
+            <div class="header-left">
                 <h1>WONGSATHON U-KAEW</h1>
                 <p class="subtitle">Computer Engineering & AI Student</p>
             </div>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#background">Background</a>
-                <a href="#contact">Contact</a>
-            </nav>
+            
+            <div class="header-right">
+                <nav class="header-nav">
+                    <a href="#about">> About</a>
+                    <a href="#background">> Background</a>
+                    <a href="#contact">> Contact</a>
+                </nav>
+            </div>
         </header>
 
         <main>
-            <section id="about" class="about-flex">
-                <img src="./profile2.jpg" alt="Profile Picture" class="profile-pic">
+            <section id="about" class="about-content">
+                <img src="./profile2.jpg" alt="Profile picture of Wongsathon U-Kaew" class="profile-pic">
                 <div class="about-text">
                     <h2>> ABOUT_ME</h2>
-                    <p>Computer Engineering & AI undergraduate specializing in Software Development, Cybersecurity, and QA Testing. Driven by logic and focused on building secure, high-quality, and robust applications.</p>
+                    <p>I am a Computer Engineering and AI student focusing on software development, cybersecurity, and automation. I enjoy building systems that are secure, efficient, and smart.</p>
                 </div>
             </section>
 
             <section id="background">
                 <h2>> BACKGROUND</h2>
-                <div class="grid-3-cols">
-                    
-                    <article class="cyber-box">
+
+                <div class="background-grid">
+
+                    <article class="info-card">
                         <h3>[ EDUCATION ]</h3>
-                        <p class="edu-text" style="margin-bottom: 15px;">
+                        <p class="edu-text edu-text--spaced">
                             <strong>B.Eng.</strong> in Computer Engineering and Artificial Intelligence <br>
-                            Walailak University <br>
-                            2024 - Present
+                            Walailak University &middot; 2024 - Present <br>
+                            <strong>GPAX:</strong> 3.76
                         </p>
 
                         <h3>[ CORE COURSEWORK ]</h3>
-                        <ul class="sub-list" style="margin-bottom: 15px;">
+                        <ul class="item-list item-list--spaced">
                             <li>Data Structures & Algorithms</li>
                             <li>Object-Oriented Programming (OOP)</li>
                             <li>Database Management Systems (DBMS)</li>
                         </ul>
 
                         <h3>[ TECH SKILLS ]</h3>
-                        <ul class="sub-list">
+                        <ul class="item-list">
                             <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
-                            <li><strong>Backend/Logic:</strong> Python, Java, C, PHP</li>
-                            <li><strong>Cyber Security:</strong> Vulnerability Assessment, Network Basics</li>
+                            <li><strong>Backend:</strong> Python, Java, C, PHP</li>
+                            <li><strong>AI / CV:</strong> Image Processing, Object Detection</li>
+                            <li><strong>Other:</strong> IoT, Automation (n8n)</li>
                         </ul>
                     </article>
 
-                    <article class="cyber-box">
+                    <article class="info-card">
                         <h3>[ TOOLS & CERTS ]</h3>
-                        <ul class="sub-list" style="margin-bottom: 15px;">
-                            <li><strong>Microsoft Certified:</strong> Word, PowerPoint (Moscamp)</li>
-                            <li><strong>Design:</strong> Adobe Photoshop (UI Mockup)</li>
-                            <li><strong>DevOps/Tools:</strong> Git, GitHub, VS Code, Postman</li>
+                        <ul class="item-list item-list--spaced">
+                            <li><strong>MOS Certified:</strong> Word, PowerPoint</li>
+                            <li><strong>Design:</strong> Adobe Photoshop</li>
+                            <li><strong>DevOps:</strong> Git, GitHub, VS Code, Postman</li>
                         </ul>
 
                         <h3>[ LANGUAGES ]</h3>
-                        <ul class="sub-list" style="margin-bottom: 15px;">
-                            <li><strong>English:</strong> B2 (CEFR) - Fluent Reading/Writing</li>
+                        <ul class="item-list item-list--spaced">
+                            <li><strong>English:</strong> B2 (CEFR) - Reading/Writing</li>
                             <li><strong>Thai:</strong> Native</li>
                         </ul>
 
                         <h3>[ SOFT SKILLS ]</h3>
-                        <ul class="sub-list">
+                        <ul class="item-list">
                             <li>Analytical & Logical Thinking</li>
-                            <li>Cross-functional Collaboration</li>
+                            <li>Team Collaboration</li>
                             <li>Agile Mindset & Adaptability</li>
+                            <li>Problem-Solving Under Pressure</li>
+                            <li>Clear Communication</li>
                         </ul>
                     </article>
 
-                    <article class="cyber-box">
+                    <article class="info-card info-card--wide">
                         <h3>[ EXP & PROJECTS ]</h3>
-                        
-                        <div class="project-item">
-                            <h4>> Silver Award: I-NEW GEN 2026</h4>
-                            <p class="project-org">National Research Council of Thailand</p>
-                            <p class="project-desc">Developed an anti-scam automation system using n8n to detect and prevent call center frauds.</p>
-                        </div>
 
-                        <div class="project-item">
-                            <h4>> Smart Greenhouse IoT System</h4>
-                            <p class="project-desc">Built a hardware-integrated system with real-time sensor monitoring, automated watering, and LINE notifications.</p>
-                        </div>
+                        <div class="project-grid">
+                            <div class="project-item">
+                                <h4>> Silver Award: I-NEW GEN 2026 <span class="project-date">(Jan 2026)</span></h4>
+                                <p class="project-org">National Research Council of Thailand</p>
+                                <p class="project-desc">Built an n8n automation pipeline that detects and blocks scam calls in real time; awarded Silver at the national competition.</p>
+                            </div>
 
-                        <div class="project-item" style="margin-bottom: 0;">
-                            <h4>> Smart Parking Management</h4>
-                            <p class="project-desc">Applied Data Structures to build a comprehensive parking booking and search system integrating simulated sensor data.</p>
+                            <div class="project-item">
+                                <h4>> Java RPG Game (OOP) <span class="project-date">(Dec 2026)</span></h4>
+                                <p class="project-desc">Console-based RPG in Java with OOP-based Weapon, Monster, Player, and Inventory classes plus turn-based combat mechanics.</p>
+                            </div>
+
+                            <div class="project-item">
+                                <h4>> Smart Greenhouse IoT <span class="project-date">(Oct 2025)</span></h4>
+                                <p class="project-desc">Real-time sensor monitoring system with automated watering and instant LINE notifications for plant care.</p>
+                            </div>
+
+                            <div class="project-item">
+                                <h4>> Smart Parking Management <span class="project-date">(Mar 2025)</span></h4>
+                                <p class="project-desc">Parking booking system built with core data structures and simulated real-time sensor data for slot tracking.</p>
+                            </div>
                         </div>
                     </article>
 
@@ -105,13 +120,33 @@
             </section>
         </main>
 
-        <footer id="contact">
-            <h2>> ESTABLISH_CONNECTION</h2>
-            <p>Email: wongsathon.uk@mail.wu.ac.th | Phone: 093-785-5268</p>
-            <div class="social-links">
-                <a href="https://github.com/Agent00PED" target="_blank">GitHub</a> | 
-                <a href="https://discord.com/users/508246964643823627" target="_blank">Discord</a>
+        <footer id="contact" class="footer-grid">
+            <h2 class="visually-hidden">Contact and Network</h2>
+
+            <div class="footer-box">
+                <h3>> CONTACT</h3>
+                <div class="footer-links">
+                    <a href="mailto:wongsathon.uk@mail.wu.ac.th"><i class="fa-regular fa-envelope"></i> wongsathon.uk@mail.wu.ac.th</a>
+                    <div class="inline-items">
+                        <a href="tel:+66937855268"><i class="fa-solid fa-phone"></i> 093-785-5268</a>
+                        <span class="separator">|</span>
+                        <a href="https://maps.google.com/?q=Songkhla,+Thailand" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot"></i> Songkhla, Thailand</a>
+                    </div>
+                </div>
             </div>
+
+            <div class="footer-box right-box">
+                <h3>> NETWORK</h3>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/wongsathon-u-kaew-49689a41b/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> Wongsathon U-Kaew</a>
+                    <div class="inline-items right-align">
+                        <a href="https://github.com/Agent00PED" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Agent00PED</a>
+                        <span class="separator">|</span>
+                        <a href="https://discord.com/users/508246964643823627" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i> masterjk_0112</a>
+                    </div>
+                </div>
+            </div>
+
         </footer>
 
     </div>
